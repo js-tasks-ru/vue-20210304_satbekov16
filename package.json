@@ -1,0 +1,56 @@
+{
+  "name": "tasks-vue-2a",
+  "version": "2.1.0",
+  "private": true,
+  "description": "Taskbook for learn.javascript.ru Vue.js Course version 2 for GitHub Actions",
+  "author": "Grigorii K. Shartsev",
+  "scripts": {
+    "file-serve": "serve",
+    "serve": "vue-cli-service serve",
+    "lint": "vue-cli-service lint .",
+    "test": "vue-cli-service test:unit",
+    "test:solution": "cross-env SOLUTION=1 npm test"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "core-js": "^3.6.5",
+    "date-fns": "^2.17.0",
+    "dayjs": "^1.10.4",
+    "jest": "^26.4.2",
+    "ky": "^0.27.0",
+    "lodash-es": "^4.17.21",
+    "moment": "^2.29.1",
+    "nanoid": "^3.1.12",
+    "serve": "^11.3.2",
+    "vue": "^2.6.12",
+    "vue-jest": "^3.0.7",
+    "vue-router": "^3.4.4",
+    "vuex": "^3.5.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/eslint-parser": "^7.12.16",
+    "@types/jest": "^26.0.14",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "^5.0.0-alpha.5",
+    "@vue/cli-plugin-unit-jest": "^4.5.6",
+    "@vue/cli-service": "^4.5.6",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/test-utils": "^1.1.0",
+    "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.20.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.6.0",
+    "flush-promises": "^1.0.2",
+    "jest-date-mock": "^1.0.8",
+    "prettier": "^2.2.1",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "babel": {
+    "presets": [
+      "@vue/cli-plugin-babel/preset"
+    ]
+  },
+  "license": "UNLICENSED"
+}
