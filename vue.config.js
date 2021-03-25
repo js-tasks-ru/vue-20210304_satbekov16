@@ -29,7 +29,6 @@ function discoverVueServeTasksDirs(rootDir = __dirname) {
   const getSubDirs = (dir) => fs.readdirSync(dir).filter((name) => isDir(path.join(dir, name)));
   const isModuleOrTaskDir = (dirname) => /^\d+-/.test(dirname);
   const isVueTaskDir = (dir) => fs.existsSync(getTaskFile(dir, 'App.vue'));
-  const readDirTitle = (dir) => fs.readFileSync(path.join(dir, 'README.md'), 'utf8').split('\n')[0].substr(2);
 
   return getSubDirs(rootDir)
     .filter(isModuleOrTaskDir)
@@ -48,8 +47,6 @@ function discoverVueServeTasksDirs(rootDir = __dirname) {
         .map((taskDir) => ({
           module: moduleDir.dirname,
           task: taskDir.dirname,
-          moduleTitle: readDirTitle(moduleDir.path),
-          taskTitle: readDirTitle(getTaskDir(taskDir.path)),
         })),
     );
 }
