@@ -14,13 +14,6 @@ new Vue({
         return result;
       }, {});
     },
-
-    moduleTitles() {
-      return Object.entries(this.taskTree).reduce((result, [module, units]) => {
-        result[module] = units[0].moduleTitle;
-        return result;
-      }, {});
-    },
   },
 
   render() {
@@ -36,12 +29,10 @@ new Vue({
                 <nav key={module} style="margin: 1rem 0; font-size: 20px">
                   <p style="margin: 1rem 0; font-weight: 700;">
                     <span>{module}</span>
-                    <span class="meetup-agenda__dot" />
-                    <span>{this.moduleTitles[module]}</span>
                   </p>
-                  {tasks.map((unit, taskIndex) => (
+                  {tasks.map((unit) => (
                     <a href={`/${unit.module}/${unit.task}`} key={unit.task} class="link" style="display: block">
-                      {taskIndex + 1}. {unit.taskTitle}
+                      {unit.task}
                     </a>
                   ))}
                 </nav>
