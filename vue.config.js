@@ -59,11 +59,11 @@ function discoverVueServeTasksDirs(rootDir = __dirname) {
  * @return {Object} pages config for vue.config.js
  */
 function generatePagesConfig(taskList) {
-  return taskList.reduce((pages, { module, task, taskTitle }) => {
+  return taskList.reduce((pages, { module, task }) => {
     pages[`${module}/${task}`] = {
       template: './src/index.html',
       entry: getTaskFile(`./${module}/${task}`, 'main.js'),
-      title: taskTitle,
+      title: task,
     };
     return pages;
   }, {});
